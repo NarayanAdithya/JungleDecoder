@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Who's That Animal?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/home.css')}}">
+  </head>
+  <body class="bg-black text-white" >
+    <div class=" text-center text-5xl text-bold mt-10 p-5 " >
+      <h1 class="" >Who is That Animal?</h1>
+    </div>
+    
+    <h6  class="text-xs text-center">Ensure atleast 6s of Audio for Best Resutls</h6>
+
+    <div align="center" class="flex-row" id="controls">
+     <button class="text-lg m-5 px-10 text-bold hover:bg-red-700  py-2 b-2 bg-green-500 rounded-xl disabled:bg-slate-600 disabled:text-gray-500 " id="recordButton">Record</button>
+     <button class="text-lg m-5 px-10 text-bold hover:bg-red-700  py-2 b-2 bg-green-500 rounded-xl disabled:bg-slate-600 disabled:text-gray-500 " id="pauseButton" disabled>Pause</button>
+     <button class="text-lg m-5 px-10 text-bold hover:bg-red-700  py-2 b-2 bg-green-500 rounded-xl disabled:bg-slate-600 disabled:text-gray-500 " id="stopButton" disabled>Stop</button>
+    </div>
+    <ol class="text-center" id="recordingsList">
+    <p align="center" ><strong>Recordings:</strong></p>
+    </ol>
+    <div class="text-lg text-center text-white" id="uploadarea" ></div>
+    <h1 class=" text-3xl text-center text-bold " id="result" ></h1>
+    <!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
+    <script src="{{url_for('static',filename='js/recorder.js')}}"></script>
+    <script src="{{ url_for('static',filename='js/app.js') }}"></script>
+  </body>
+</html>
