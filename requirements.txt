@@ -13,6 +13,7 @@ flake8==5.0.4
 Flask==2.2.2
 flatbuffers==22.9.24
 gast==0.4.0
+gunicorn
 google-auth==2.12.0
 google-auth-oauthlib==0.4.6
 google-pasta==0.2.0
